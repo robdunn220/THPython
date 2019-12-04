@@ -2,13 +2,17 @@
 team = {'name': 'Michigan', 'mascot': 'Wolverines', 'rank': 4}
 
 # Returns value with key 'name'
-print(team['name'])
+# print(team['name'])
+#
+# # Returns all keys
+# print(team.keys())
+#
+# # Returns all values
+# print(team.values())
+#
+# # Returns all keys or values (whichever is specified), sorted alphabetically. Only works if all items are same type
+# print(sorted(team.keys()))
 
-# Returns all keys
-print(team.keys())
-
-# Returns all values
-print(team.values())
-
-# Returns all keys or values (whichever is specified), sorted alphabetically. Only works if all items are same type
-print(sorted(team.keys()))
+# Iteration example using .items() to iterate over both keys and values
+for key, value in team.items():
+    print(value)
