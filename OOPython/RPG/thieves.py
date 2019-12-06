@@ -3,7 +3,7 @@ from OOPython.RPG.character import Character
 from OOPython.RPG.attributes import Sneaky, Agile
 
 
-class Thief(Character, Sneaky, Agile):
+class Thief(Sneaky, Agile, Character):
     @staticmethod
     def pickpocket(self):
         if self.sneaky:
