@@ -24,9 +24,19 @@ class Dice:
     def __lt__(self, other):
         return int(self) < other
 
+    def __add__(self, other):
+        return int(self) + other
 
-d1 = Dice(6)
-d2 = Dice(6)
+    def __radd__(self, other):
+        return int(self) + other
 
-print('D1: {}, D2: {}'.format(d1.value, d2.value))
-print(d1.__gt__(d2))
+    def __repr__(self):
+        return str(self.value)
+
+
+class D20(Dice):
+    def __init__(self):
+        super().__init__(sides=20)
+
+
+d20 = D20()
